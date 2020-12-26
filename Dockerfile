@@ -1,6 +1,6 @@
 # Dockerfile for lighttpd
 
-FROM alpine
+FROM alpine:latest
 
 ENV LIGHTTPD_VERSION=1.4.57-r0
 
