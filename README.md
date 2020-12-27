@@ -1,4 +1,4 @@
-# lighttpd Docker image
+# DO NOT USE
 
 Security, speed, compliance, and flexibility -- all of these describe [lighttpd](http://www.lighttpd.net/)
 
