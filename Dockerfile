@@ -12,7 +12,7 @@ RUN apk add --update --no-cache \
 COPY etc/lighttpd/* /etc/lighttpd/
 COPY start.sh /usr/local/bin/
 
-EXPOSE 80
+EXPOSE 81
 
 VOLUME /var/www/localhost
 VOLUME /etc/lighttpd
