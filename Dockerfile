@@ -26,4 +26,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME /var/www/
 
-CMD ["supervisord"]
+CMD ["supervisord -c /etc/supervisor/conf.d/supervisord.conf"]
