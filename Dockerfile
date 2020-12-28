@@ -15,7 +15,6 @@ RUN apk add --update --no-cache \
 RUN apk update \
  && apk upgrade \
  && apk add tor --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/community/ --allow-untrusted \
- && apk add bash \
  && rm /var/cache/apk/*
 
 COPY etc/lighttpd/* /etc/lighttpd/
@@ -23,7 +22,8 @@ COPY start.sh /usr/local/bin/
 COPY tor.sh /usr/local/bin/
 COPY torrc /etc/tor/torrc
 COPY supervisord.conf /etc/supervisord.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME /var/www/
 
-CMD ["supervisord -c /etc/supervisord.conf"]
+CMD ["/usr/bin/supervisord"]
