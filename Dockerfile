@@ -22,7 +22,7 @@ COPY etc/lighttpd/* /etc/lighttpd/
 COPY start.sh /usr/local/bin/
 COPY tor.sh /usr/local/bin/
 COPY torrc /etc/tor/torrc
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/
 
 VOLUME /var/www/
 
