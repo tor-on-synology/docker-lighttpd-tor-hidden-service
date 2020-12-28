@@ -23,4 +23,4 @@ COPY torrc /etc/tor/torrc
 
 VOLUME /var/www/
 
-CMD ["/usr/local/bin/startup.sh","start.sh"]
+CMD ["/usr/bin/tor -f /etc/tor/torrc","start.sh"]
