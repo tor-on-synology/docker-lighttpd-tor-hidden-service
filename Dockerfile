@@ -19,8 +19,9 @@ RUN apk update \
 
 COPY etc/lighttpd/* /etc/lighttpd/
 COPY start.sh /usr/local/bin/
+COPY tor.sh /usr/local/bin/
 COPY torrc /etc/tor/torrc
 
 VOLUME /var/www/
 
-CMD ["/usr/bin/tor -f /etc/tor/torrc","start.sh"]
+CMD ["tor.sh","start.sh"]
