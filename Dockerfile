@@ -9,6 +9,7 @@ RUN apk add --update --no-cache \
 	lighttpd-mod_auth \
 	bash \
 	nano \
+	supervisor \
   && rm -rf /var/cache/apk/*
   
 RUN apk update \
