@@ -1,6 +1,8 @@
 ## The directory for keeping all the keys/etc
 DataDirectory /var/lib/tor
 
+RunAsDaemon 1
+
 SocksPort auto
 
 HiddenServiceDir /var/lib/tor/hidden_service
