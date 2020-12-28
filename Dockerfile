@@ -22,7 +22,8 @@ COPY etc/lighttpd/* /etc/lighttpd/
 COPY start.sh /usr/local/bin/
 COPY tor.sh /usr/local/bin/
 COPY torrc /etc/tor/torrc
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME /var/www/
 
-CMD ["tor.sh","start.sh"]
+CMD ["supervisord"]
